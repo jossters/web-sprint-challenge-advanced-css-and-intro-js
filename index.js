@@ -291,14 +291,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array,paint){
-    if (paint > 100) {
-     return array.name;
+function lotsOfArt(arr,){
+const paint = [];
+for (let i = 0; i <= arr.length-1; i++) {
+  if(arr[i].paintings > 100){
+   paint.push(arr[i].name);
   }
-}console.log(artists,paintings)
-
-
-
+}
+return paint;
+console.log(paint);
+}
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
