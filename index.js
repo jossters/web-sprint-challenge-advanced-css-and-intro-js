@@ -216,7 +216,7 @@ console.log(artists[2].bio)
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
 artists[8].name='Vincent Van Gogh'
-console.log(artists)
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called `getArtistByIndex` that takes two arguments:
@@ -231,7 +231,7 @@ function getArtistByIndex(artist,array) {
   let {id,name}= artist[array]
   return `the artist at index ${id} is ${name}`
 }  
-console.log(getArtistByIndex(artists,5))
+getArtistByIndex.artists,[5]
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() 
@@ -240,12 +240,8 @@ it returns an array with names of artists who were born in and died in 20th cent
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 let futureNum = parseFloat(artists.years)
-function get20s(name){
-  if(name >= 1900 ||name <= 2000 ){
-    return (artists.name)
-  }
-}
-console.log(get20s(artists.years))
+function get20s(name){}
+  
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -257,9 +253,11 @@ Create a function called `removeArtist` that takes two arguments:
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset and log the number 19.  
 */
-function removeArtist( artis, arr) {
+function removeArtist(arr,value) {
+  arr.splice(value,);
+  return artists.length;
 }
-
+console.log(removeArtist(artists, 18))
 
 /**
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -276,11 +274,13 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array,id,name,years,genre,nationality,bio){
+
+  artists.push({id,name,years,genre,nationality,bio});
+  return array;
   }
 
-  
+console.log(addArtist(artists,20,'johnny','1997-2020','Web Design','USA',"sometimes spelt in English as Durer or Duerer, without umlaut, was a painter, printmaker, and theorist of the German Renaissance. Born in Nuremberg, Dürer established his reputation and influence across Europe when he was still in his twenties due to his high-quality woodcut prints."))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Create a function called lotsOfArt() that takes one argument: 
@@ -291,9 +291,12 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
-}
+function lotsOfArt(array,paint){
+    if (paint > 100) {
+     return array.name;
+  }
+}console.log(artists,paintings)
+
 
 
 
