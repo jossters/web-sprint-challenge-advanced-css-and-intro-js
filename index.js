@@ -239,10 +239,21 @@ it takes one argument of data
 it returns an array with names of artists who were born in and died in 20th century (1900-2000) 
 example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
-let futureNum = parseFloat(artists.years)
-function get20s(name){}
-  
 
+function get20s(arr){
+  const died = [];
+  for (let i = 0; i <= arr.length-1; i++) {
+    const num = parseInt(arr[i].years);
+    if(num > 1900){
+     died.push(arr[i].name);
+     
+    }
+  }
+  return died;
+  }
+  console.log(get20s(artists));
+  
+  
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called `removeArtist` that takes two arguments:
